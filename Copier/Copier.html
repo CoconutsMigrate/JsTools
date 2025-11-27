@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Copier</title>
+<style>	
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	.row {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	textarea {
+		height: 2em;
+		width: 400px;
+		font-size: large;
+	}
+
+	button {
+		height: 2em;
+	}
+</style>
+<script type="text/javascript" src="Copier.js" ></script>
+</head>
+<body>
+<h1>Copier</h1>
+
+
+<div class="container">
+    <div class="row">
+        <textarea id="copy0"></textarea>
+        <button onclick="copyText(0)">Copy</button>
+    </div>
+    <div class="row">
+        <textarea id="copy1"></textarea>
+        <button onclick="copyText(1)">Copy</button>
+    </div>
+    <div class="row">
+        <textarea id="copy2"></textarea>
+        <button onclick="copyText(2)">Copy</button>
+    </div>
+    <div class="row">
+        <textarea id="copy3"></textarea>
+        <button onclick="copyText(3)">Copy</button>
+    </div>
+    <div class="row">
+        <textarea id="copy4"></textarea>
+        <button onclick="copyText(4)">Copy</button>
+    </div>
+    <div class="row">
+        <textarea id="copy5"></textarea>
+        <button onclick="copyText(5)">Copy</button>
+    </div>
+    <div class="row">
+        <textarea id="copy6"></textarea>
+        <button onclick="copyText(6)">Copy</button>
+    </div>
+    <div class="row">
+        <textarea id="copy7"></textarea>
+        <button onclick="copyText(7)">Copy</button>
+    </div>
+    <div class="row">
+        <textarea id="copy8"></textarea>
+        <button onclick="copyText(8)">Copy</button>
+    </div>
+    <div class="row">
+        <textarea id="copy9"></textarea>
+        <button onclick="copyText(9)">Copy</button>
+    </div>
+</div>
+
+<p>
+
+<div id="controls">
+	<button onclick="clearAll()">Clear All</button>
+	 &nbsp; 
+	<button onclick="save()">Save All</button>
+</div>
+</body>
+</html>
