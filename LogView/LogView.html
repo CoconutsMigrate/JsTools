@@ -1,0 +1,35 @@
+<html>
+<head>
+<style>
+</style>
+
+<script type="text/javascript" src="LogView.js" ></script>
+<script type="text/javascript" src="LogView-conf.js" ></script>
+
+<script>
+
+</script>
+
+</head>
+<body>
+
+<form>
+	<input type="file" id="fileSelect">
+	&nbsp; &nbsp; &nbsp; &nbsp; 
+	<input type="checkbox" id="showText"><label for="showText">Show Text</label>
+	&nbsp; &nbsp; <button id="clear" onclick="doClear()">Clear All</button>
+</form>
+<textarea id="input" rows="5" cols="100" style="display: none"></textarea>
+<p>
+<button id="clearText">Clear</button> &nbsp; &nbsp;
+<button id="processLog">Load from editor</button> &nbsp; &nbsp; &nbsp; &nbsp;
+Line Length: <input type="text" id="linelen" size="2"> &nbsp; &nbsp;
+Show: <input type="text" id="show" size="32">
+Hide: <input type="text" id="hide" size="32">
+<button id="filterCmd">Set</button>
+
+<br>
+<br>
+<div id="out" style="font-family: monospace"></div>
+<body>
+</html>

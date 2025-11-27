@@ -1,0 +1,71 @@
+<html>
+<head>
+<title>Json View</title>
+<style>
+	.key {
+		color: blue;
+	}
+	.number {
+		color: red;
+	}
+	.boolean {
+		color: green;
+	}
+	.null {
+		color: grey;
+	}
+	
+	.container{
+		display: flex;
+	  
+	}
+
+	.side{
+		overflow: hidden;
+		margin-right: 40px;
+	}
+
+	.content{
+		overflow: hidden;
+	}
+</style>
+
+<script type="text/javascript" src="ViewCommon.js" ></script>
+<script type="text/javascript" src="../common/IndexDb.js" ></script>
+<script type="text/javascript" src="JsonView.js" ></script>
+<script type="text/javascript" src="JsonViewConfig.js" ></script>
+<script type="text/javascript" src="JsonViewFormat.js" ></script>
+
+</head>
+<body>
+<span id="filename"></span>
+<form>
+	<input type="file" id="fileSelect">
+	&nbsp; &nbsp; &nbsp; &nbsp; 
+	<input type="checkbox" id="showJsonText"><label for="showJsonText">Show JSON Text</label>
+	&nbsp; &nbsp; <button id="clear" onclick="doClear()">Clear All</button>
+</form>
+<p>
+
+<textarea id="input" rows="5" cols="100" style="display: none"></textarea>
+<br>
+<button id="fromText">Load from editor</button>
+<input type="checkbox" id="stripToJson" checked><label for="stripToJson">Strip to Json</label>
+
+<p>
+<div id="buttons"></div>
+&nbsp;
+	
+<div id="filter"></div>
+
+<p>
+
+<div class = "container">
+  <div class = "side">
+    <table border="1" cellpadding="4" id="table"></table>
+  </div>
+  <div id="extraContent" class ="content"></div>
+</div>
+
+</body>
+</html>
