@@ -131,14 +131,6 @@ function numberSep(str) {
 	return str.replace(/\B(?=(\d{3})+(?!\d))/g, " "); /// "12345678" -> "12 345 678"
 }
 
-function isShowJsonText() {
-	return document.getElementById("showJsonText").checked;
-}
-
-function getInputFieldText() {
-	return document.getElementById("input").value;
-}
-
 
 
 

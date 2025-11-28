@@ -268,6 +268,14 @@ function setFilename(value) {
 	document.getElementById("filename").innerHTML = "Loaded file: " + value;
 }
 
+function isShowJsonText() {
+	return document.getElementById("showJsonText").checked;
+}
+
+function getInputFieldText() {
+	return document.getElementById("input").value;
+}
+
 window.onload = (event) => {
 	document.getElementById("fileSelect").onchange = readText.bind(null, null);
 	document.getElementById("fromText").onclick = inputFromTextArea.bind(null, null);
