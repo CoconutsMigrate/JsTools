@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>Generate</title>
+<style>
+	.narrow {
+		width: 68px;
+	}
+	.wide {
+		width: 150px;
+	}
+	.warning {
+		background-color: yellow;
+	}
+	.hidden {
+		display: none;
+	}
+	.warning {
+		background-color: yellow !important;
+	}
+	.different {
+		background-color: #f4f4ff;
+	}
+</style>
+
+</head>
+<script type="text/javascript" src="Generate.js" ></script>
+<script type="text/javascript" src="GenerateCommon.js" ></script>
+<script type="text/javascript" src="../Common/IndexDb.js" ></script>
+<body>
+
+<h1>Output generator</h1>
+<span id="filename"></span>
+<form>
+	<input type="file" id="fileSelect">
+</form>
+<table><tr><td valign="top">
+	<table cellpadding="2" border="1">
+	<tr class="different">
+		<td>Important Field</td><td><input type="text" class="wide field validateValuePresent different" id="importantField"></td>
+	</tr>
+
+	<tr></tr><tr></tr><tr></tr> <!-- Bad but functional spacer -->
+	
+	<tr>
+		<td>Normal Field</td><td><input type="text" class="wide field validateValuePresent" id="normalField"></td>
+	</tr>
+	
+	<tr>
+		<td>Normal Any Field</td><td><input type="text" class="wide field" id="normalAnyField"></td>
+	</tr>
+
+	<tr></tr><tr></tr><tr></tr> <!-- Bad but functional spacer -->
+	
+	<tr>
+		<td>Two Fields</td><td><input type="number" class="narrow field validateValuePresent" id="field1"> / <input type="number" class="narrow field validateValuePresent" id="field2"></td>
+	</tr>
+	
+	<tr>
+		<td>Combo Box</td><td><select class="select wide field validateValuePresent" id="comboBox"><option></option><option>1</option><option>2</option><option>3</option></select></td>
+	</tr>
+	
+	</table>
+</td>
+<td valign="top">
+<div style="margin-top: 0.6em; margin-bottom: 8px;">
+	<div style="padding-left: 0.3em; padding-right: 0.3em; background-color:white; z-index: 1; position: absolute; margin-left: 8px; margin-top: -0.6em;">
+		<span style="white-space: nowrap;">Generate</span>
+	</div>
+	<div style="border: 1px solid black; padding-top: 16px; padding-left: 8px; padding-right: 8px; padding-bottom: 8px; margin-top: -0.6em; z-index: -1;">
+		<button onclick="generate()">Generate</button>
+	</div>
+</div>
+<p>
+<div style="margin-top: 2em; margin-bottom: 8px;">
+	<div style="padding-left: 0.3em; padding-right: 0.3em; background-color:white; z-index: 1; position: absolute; margin-left: 8px; margin-top: -0.6em;">
+		<span style="white-space: nowrap;">Configuration</span>
+	</div>
+	<div style="border: 1px solid black; padding-top: 16px; padding-left: 8px; padding-right: 8px; padding-bottom: 8px; margin-top: -0.6em; z-index: -1;">
+		<button onclick="twConfigOut()">TW Config Out</button>
+		&nbsp;
+		<button onclick="configOut()">Config Out</button>
+		&nbsp;
+		<button onclick="configIn()">Config In</button>
+		&nbsp;
+		<button onclick="clearAll()">Clear All</button>
+		&nbsp;
+		<button onclick="clearFile()">Clear File</button>
+	</div>
+</div>
+<p>
+<textarea id="output" rows="40" cols="64"></textarea>
+</td>
+</tr>
+</table>
+
+</body>
+</html>
